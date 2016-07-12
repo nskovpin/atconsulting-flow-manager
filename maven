@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=путь к ConsultingServices\src\main\lib\consulting-services.jar -DpomFile=путь к ConsultingServices\pom.xml

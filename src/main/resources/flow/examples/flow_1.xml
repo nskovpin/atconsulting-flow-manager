@@ -1,0 +1,38 @@
+<flow id="1">
+    <start to="0"/>
+
+    <step id="0">
+        <execute name="Проверить абонента в базе"/>
+        <ok to="1"/>
+        <error to="10"/>
+    </step>
+
+    <step id="1">
+        <execute name="Баланс и состояние"/>
+        <ok to="2"/>
+        <error to="10"/>
+    </step>
+
+    <step id="2">
+        <execute name="Местоположение"/>
+        <ok to="3"/>
+        <error to="10"/>
+    </step>
+
+    <step id="3">
+        <execute name="Баланс"/>
+        <ok to="end"/>
+        <error to="10"/>
+    </step>
+
+    <step id="4">
+        <execute name="Возвратить результат"/>
+        <ok to="end"/>
+        <error to="10"/>>
+    </step>
+
+    <step id="10">
+        <execute name="Ошибка"/>
+    </step>
+
+</flow>

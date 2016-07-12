@@ -1,0 +1,65 @@
+<instructions>
+    <instruction name="CHECK_CURRENT_STEP_instruction" link="Проверить абонента в базе"></instruction>
+
+    <instruction name="GLASSFISH_instruction" link="Баланс и состояние">
+        <params>
+            <name>CP</name>
+            <password>CP</password>
+            <service>SubscribeInfoBindingPort</service>
+            <url>http://dr-glass016:3460/SubServiceSoap/</url>
+            <args>
+                <value>corebalance</value>
+                <value>state</value>
+            </args>
+        </params>
+    </instruction>
+
+    <instruction name="GLASSFISH_instruction" link="Баланс">
+        <params>
+            <name>CP</name>
+            <password>CP</password>
+            <service>SubscriberCoreBalance</service>
+            <url>http://dr-glass016:3460/SubServiceSoap/</url>
+            <args>
+                <value>corebalance</value>
+            </args>
+        </params>
+    </instruction>
+
+    <instruction name="TSMS_instruction" link="Пароль для местоположения">
+        <params>
+            <name>BOT</name>
+            <password>123456aA</password>
+            <service>TokenService</service>
+            <url>http://192.168.151.139//smsw/apiv3.php</url>
+        </params>
+    </instruction>
+
+    <instruction name="TSMS_instruction" link="Местоположение">
+        <params>
+            <name>BOT</name>
+            <password>123456aA</password>
+            <service>LocationService</service>
+            <url>http://192.168.151.139//smsw/apiv3.php</url>
+        </params>
+    </instruction>
+
+    <instruction name="RETURN_RESULT_instruction" link="Возвратить результат">
+        <params>
+            <name>test</name>
+            <password>test</password>
+            <!--<url>http://10.127.243.146:8080/postResult</url>-->
+            <url>http://172.21.162.56/bot-api/workflow/process</url>
+        </params>
+    </instruction>
+
+    <instruction name="ERROR_instruction" link="Ошибка">
+        <params>
+            <name>test</name>
+            <password>test</password>
+            <!--<url>http://10.127.243.146:8080/postError</url>-->
+            <url>http://172.21.162.56/bot-api/workflow/process</url>
+        </params>
+    </instruction>
+
+</instructions>
